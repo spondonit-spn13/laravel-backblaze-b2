@@ -21,7 +21,7 @@
     ],
     "require": {
         "php": "^8.0",
-        "mhetreramesh/flysystem-backblaze": "^1.6"
+        "marcandreappel/flysystem-backblaze": "^1.6"
     },
     "autoload": {
         "psr-4": {
