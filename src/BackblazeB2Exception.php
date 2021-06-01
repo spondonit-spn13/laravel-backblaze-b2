@@ -1,7 +1,8 @@
 <?php
+declare(strict_types=1);
 
-namespace Gliterd\BackblazeB2;
+namespace MarcAndreAppel\BackblazeB2;
 
-class BackblazeB2Exception extends \Exception
-{
-}
+use Exception;
+
+class BackblazeB2Exception extends Exception {}

@@ -1,12 +1,9 @@
-# laravel-backblaze-b2
+# Laravel Backblaze B2
 
-[![Author](http://img.shields.io/badge/author-@mhetreramesh-blue.svg?style=flat-square)](https://twitter.com/mhetreramesh)
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/gliterd/laravel-backblaze-b2.svg?style=flat-square)](https://packagist.org/packages/gliterd/laravel-backblaze-b2)
+[![Author](http://img.shields.io/badge/author-@marcandreappel-blue.svg?style=flat-square)](https://twitter.com/mhetreramesh)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/marcandreappel/laravel-backblaze-b2.svg?style=flat-square)](https://packagist.org/packages/gliterd/laravel-backblaze-b2)
 [![Software License][ico-license]](LICENSE.md)
-[![Build Status](https://img.shields.io/travis/gliterd/laravel-backblaze-b2/master.svg?style=flat-square)](https://travis-ci.org/gliterd/laravel-backblaze-b2)
-[![Coverage Status][ico-scrutinizer]][link-scrutinizer]
-[![Quality Score][ico-code-quality]][link-code-quality]
-[![Total Downloads](https://img.shields.io/packagist/dt/gliterd/laravel-backblaze-b2.svg?style=flat-square)](https://packagist.org/packages/gliterd/laravel-backblaze-b2)
+[![Total Downloads](https://img.shields.io/packagist/dt/marcandreappel/laravel-backblaze-b2.svg?style=flat-square)](https://packagist.org/packages/gliterd/laravel-backblaze-b2)
 
 Visit (https://secure.backblaze.com/b2_buckets.htm) and get your account id, application key.
 
@@ -17,23 +14,24 @@ The Laravel Backblaze B2 Storage Service Provider give provision for for laravel
 Via Composer
 
 ``` bash
-composer require gliterd/laravel-backblaze-b2
+composer require marcandreappel/laravel-backblaze-b2
 ```
 In your app.php config file add to the list of service providers:
 
 ``` php
-\Gliterd\BackblazeB2\BackblazeB2ServiceProvider::class,
+\MarcAndreAppel\BackblazeB2\BackblazeB2ServiceProvider::class,
 ```
 Add the following to your filesystems.php config file in the disks section:
-``` php
-'b2' => [
-    'driver'         => 'b2',
-    'accountId'      => '',
-    'applicationKey' => '',
-    'bucketName'     => '',
-    'bucketId'       => '', //optional
-],
+```php
+        'b2' => [
+            'driver'         => 'b2',
+            'accountId'      => env('B2_APPLICATION_KEY_ID'),
+            'applicationKey' => env('B2_APPLICATION_KEY_SECRET'),
+            'bucketName'     => env('B2_BUCKET_NAME'),
+            'bucketId'       => env('B2_BUCKET_ID', ''),
+        ],
 ```
+
 ## Using ApplicationKey instead of MasterKey
 If you specify only the bucket name, your application key must be the master key.
 However, if you specify both bucket name and bucket id, you do not need the master key and can use a single-bucket key.
@@ -51,24 +49,9 @@ and
 \Storage::disk('b2')->get('filename.txt')
 ```
 
-## Change log
-
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
-
-## Testing
-
-``` bash
-$ composer test
-```
-
-## Contributing
-
-Please see [CONTRIBUTING](CONTRIBUTING.md) and [CONDUCT](CONDUCT.md) for details.
-
 ## Security
 
-If you discover any security related issues, please email mhetreramesh@gmail.com instead of using the issue tracker.
-
+If you discover any security related issues, please use the issue tracker.
 ## Credits
 
 - [Ramesh Mhetre][link-author]
@@ -80,15 +63,9 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 
 [ico-version]: https://img.shields.io/packagist/v/gliterd/laravel-backblaze-b2.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/gliterd/laravel-backblaze-b2/master.svg?style=flat-square
-[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/gliterd/laravel-backblaze-b2.svg?style=flat-square
-[ico-code-quality]: https://img.shields.io/scrutinizer/g/gliterd/laravel-backblaze-b2.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/gliterd/laravel-backblaze-b2.svg?style=flat-square
 
 [link-packagist]: https://packagist.org/packages/gliterd/laravel-backblaze-b2
-[link-travis]: https://travis-ci.org/gliterd/laravel-backblaze-b2
-[link-scrutinizer]: https://scrutinizer-ci.com/g/gliterd/laravel-backblaze-b2/code-structure
-[link-code-quality]: https://scrutinizer-ci.com/g/gliterd/laravel-backblaze-b2
 [link-downloads]: https://packagist.org/packages/gliterd/laravel-backblaze-b2
-[link-author]: https://github.com/mhetreramesh
+[link-author]: https://github.com/marcandreappel
 [link-contributors]: ../../contributors
