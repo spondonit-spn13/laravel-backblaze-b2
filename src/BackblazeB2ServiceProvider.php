@@ -7,7 +7,7 @@ use BackblazeB2\Client as BackblazeClient;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\ServiceProvider;
 use League\Flysystem\Filesystem;
-use Mhetreramesh\Flysystem\BackblazeAdapter;
+use MarcAndreAppel\FlysystemBackblaze\BackblazeAdapter;
 
 class BackblazeB2ServiceProvider extends ServiceProvider
 {
