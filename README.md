@@ -7,15 +7,21 @@
 
 Visit (https://secure.backblaze.com/b2_buckets.htm) and get your account id and application key.
 
-This package allows Laravel to use Backblaze B2 buckets as filesystem.
+This package allows Laravel 9 to use Backblaze B2 buckets as filesystem.
 It uses the [Backblaze B2 SDK](https://github.com/gliterd/backblaze-b2) and the [Backblaze Flysystem Adapter](https://github.com/marcandreappel/flysystem-backblaze) to communicate with the API.
 
 ## Install
 
-Via Composer
+Via Composer, for Laravel 9 and above:
 
-``` bash
+```shell
 composer require marcandreappel/laravel-backblaze-b2
+```
+
+For older Laravel (versions 6 to 8):
+
+```shell
+composer require "marcandreappel/laravel-backblaze-b2:v1.4.2"
 ```
 
 ## Configuration
