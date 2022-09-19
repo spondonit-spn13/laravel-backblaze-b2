@@ -20,7 +20,7 @@
         }
     ],
     "require": {
-        "php": "^8.0",
+        "php": "^8.0|^8.1",
         "gliterd/backblaze-b2": ">=1.5.0",
         "marcandreappel/flysystem-backblaze": "^2.0"
     },
@@ -45,6 +45,6 @@
         }
     },
     "require-dev": {
-        "orchestra/testbench": "^6.18"
+        "orchestra/testbench": "^v7.0"
     }
 }
