@@ -5,23 +5,27 @@
 [![Software License][ico-license]](LICENSE.md)
 [![Total Downloads](https://img.shields.io/packagist/dt/marcandreappel/laravel-backblaze-b2.svg?style=flat-square)](https://packagist.org/packages/gliterd/laravel-backblaze-b2)
 
-Visit (https://secure.backblaze.com/b2_buckets.htm) and get your account id and application key.
+## Description
+
+Visit [your Backblaze B2 dashboard](https://secure.backblaze.com/b2_buckets.htm) and get your account id and application 
+key.
 
 This package allows Laravel 9 to use Backblaze B2 buckets as filesystem.
-It uses the [Backblaze B2 SDK](https://github.com/gliterd/backblaze-b2) and the [Backblaze Flysystem Adapter](https://github.com/marcandreappel/flysystem-backblaze) to communicate with the API.
+It uses the [Backblaze B2 SDK](https://github.com/gliterd/backblaze-b2) and the 
+[Backblaze Flysystem Adapter](https://github.com/marcandreappel/flysystem-backblaze) to communicate with the API.
 
-## Install
+## Installation
 
-Via Composer, for Laravel 9 and above:
+For Laravel 9 and beyond, install it with Composer:
 
 ```shell
 composer require marcandreappel/laravel-backblaze-b2
 ```
 
-For older Laravel (versions 6 to 8):
+For legacy Laravel (versions 6 to 8):
 
 ```shell
-composer require "marcandreappel/laravel-backblaze-b2:v1.4.2"
+composer require "marcandreappel/laravel-backblaze-b2:^1.4"
 ```
 
 ## Configuration
@@ -64,12 +68,12 @@ If you discover any security related issues, please use the issue tracker.
 
 ## Credits
 
-- [Ramesh Mhetre][link-author]
-- [All Contributors][link-contributors]
+- [Ramesh Mhetre][https://github.com/mhetreramesh]
+- [All Contributors][https://github.com/gliterd/laravel-backblaze-b2/graphs/contributors]
 
 ## License
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+The MIT License (MIT). Please [read the license file](LICENSE.md) for more information.
 
 [ico-version]: https://img.shields.io/packagist/v/marcandreappel/laravel-backblaze-b2.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
@@ -77,5 +81,3 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 
 [link-packagist]: https://packagist.org/packages/marcandreappel/laravel-backblaze-b2
 [link-downloads]: https://packagist.org/packages/marcandreappel/laravel-backblaze-b2
-[link-author]: https://github.com/mhetreramesh
-[link-contributors]: ../../contributors
