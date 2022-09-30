@@ -6,30 +6,22 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/marcandreappel/laravel-backblaze-b2.svg?style=flat-square)](https://packagist.org/packages/gliterd/laravel-backblaze-b2)
 
 ## Description
-
-Visit [your Backblaze B2 dashboard](https://secure.backblaze.com/b2_buckets.htm) and get your account id and application 
-key.
-
 This package allows Laravel 9 to use Backblaze B2 buckets as filesystem.
 It uses the [Backblaze B2 SDK](https://github.com/gliterd/backblaze-b2) and the 
 [Backblaze Flysystem Adapter](https://github.com/marcandreappel/flysystem-backblaze) to communicate with the API.
 
 ## Installation
-
-For Laravel 9 and beyond, install it with Composer:
-
+For Laravel v9 and beyond, install it with Composer:
 ```shell
 composer require marcandreappel/laravel-backblaze-b2
 ```
 
-For legacy Laravel (versions 6 to 8):
-
+For legacy Laravel (v6 to v8):
 ```shell
 composer require "marcandreappel/laravel-backblaze-b2:^1.4"
 ```
 
 ## Configuration
-
 In your `config/app.php`, add to the list of service providers:
 
 ``` php
@@ -48,13 +40,16 @@ In your `config/filesystems.php` add under disks the driver:
 ```
 
 ## Using ApplicationKey instead of MasterKey
+Visit [your Backblaze B2 dashboard](https://secure.backblaze.com/b2_buckets.htm) and get your account id and application
+key.
 
-If you specify only the `$bucketName` when creating the BackblazeAdapter, your `$applicationKey` must be the **master key**.
+If you specify only the `$bucketName` when creating the BackblazeAdapter, your `$applicationKey` must be the 
+**master key**.\
 However, if you specify both bucket name and bucket id, you can use an application key.
-Fetch your `$bucketId` using the [b2 command line tool](https://www.backblaze.com/b2/docs/quick_command_line.html) `b2 get-bucket <bucketName>`.
+Fetch your `$bucketId` using the [b2 command line tool](https://www.backblaze.com/b2/docs/quick_command_line.html) 
+`b2 get-bucket <bucketName>`.
 
 ## Usage
-
 Use it directly with the `Storage` facade.
 
 ``` php
@@ -63,21 +58,14 @@ Use it directly with the `Storage` facade.
 ```
 
 ## Security
-
 If you discover any security related issues, please use the issue tracker.
 
 ## Credits
-
-- [Ramesh Mhetre][https://github.com/mhetreramesh]
-- [All Contributors][https://github.com/gliterd/laravel-backblaze-b2/graphs/contributors]
+- [Ramesh Mhetre](https://github.com/mhetreramesh)
+- [Mark Lambley](https://github.com/mlambley)
+- [All Contributors](https://github.com/gliterd/laravel-backblaze-b2/graphs/contributors)
 
 ## License
-
 The MIT License (MIT). Please [read the license file](LICENSE.md) for more information.
 
-[ico-version]: https://img.shields.io/packagist/v/marcandreappel/laravel-backblaze-b2.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/marcandreappel/laravel-backblaze-b2.svg?style=flat-square
-
-[link-packagist]: https://packagist.org/packages/marcandreappel/laravel-backblaze-b2
-[link-downloads]: https://packagist.org/packages/marcandreappel/laravel-backblaze-b2
